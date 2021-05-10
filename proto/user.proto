@@ -1,0 +1,13 @@
+syntax = "proto3";
+package pb;
+option go_package = "./;pb"; // Deve-se incluir a / --- gRPC/go.sum packange to pb 
+
+message User {
+    string id = 1;
+    string name = 2;
+    string email = 3;
+}
+
+service UserService {
+    rpc AddUSer (User) returns (User);
+}
